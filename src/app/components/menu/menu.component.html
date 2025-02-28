@@ -1,0 +1,43 @@
+<div class="w-screen h-screen flex flex-col">
+    <div class="w-screen h-[60px] bg-white flex flex-row items-center justify-between px-3">
+        <div class="flex flex-row items-center space-x-1">
+            <a href="/dash/accounts"
+                class="text-green-500 border border-green-500 p-1 rounded-md hover:bg-green-500 hover:text-white duration-150"
+                title="Recarregar usuários">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-layers">
+                    <path
+                        d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+                    <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+                    <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+                </svg>
+            </a>
+            <a href="/dash/new-account"
+                class="text-orange-500 border border-orange-500 p-1 rounded-md hover:bg-orange-500 hover:text-white duration-150"
+                title="Usuários inativos">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-file-plus-2">
+                    <path d="M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4" />
+                    <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+                    <path d="M3 15h6" />
+                    <path d="M6 12v6" />
+                </svg>
+            </a>
+        </div>
+        <button (click)="logout()"
+            class="p-1 rounded-md border border-red-500 hover:bg-red-500 text-red-500 duration-150 hover:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-log-out">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                <polyline points="16 17 21 12 16 7" />
+                <line x1="21" x2="9" y1="12" y2="12" />
+            </svg>
+        </button>
+    </div>
+    <div class="w-full h-full p-1">
+        <ng-content></ng-content>
+    </div>
+</div>
